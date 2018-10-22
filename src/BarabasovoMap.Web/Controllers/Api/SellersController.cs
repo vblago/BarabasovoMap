@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +21,10 @@ namespace BarabasovoMap.Web.Controllers.Api
         [HttpGet]
         public async Task<ICollection<Seller>> Get()
         {
-            return await this.context.Sellers.ToListAsync();
+            return await this.context.Sellers
+                .Where(seller => seller.FirstName == "Bob")
+                .OrderBy(seller => seller.LastName)
+                .ToListAsync();
         }
     }
 }

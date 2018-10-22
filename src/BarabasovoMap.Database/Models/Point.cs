@@ -15,5 +15,9 @@ namespace BarabasovoMap.Database.Models
         public virtual ICollection<Seller> Sellers { get; set; }
 
         public virtual ICollection<Property> Properties { get; set; }
+
+        public virtual ICollection<PointService> PointServices { get; set; }
+
+        public virtual ICollection<PointCategory> PointCategories { get; set; }
     }
 }

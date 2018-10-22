@@ -10,6 +10,8 @@ namespace BarabasovoMap.Database.Configurations
         {
             builder.HasKey(x => x.Id);
 
+            builder.Property(x => x.StartDate).IsRequired();
+
             builder.HasOne(x => x.Location)
                 .WithMany()
                 .HasForeignKey(x => x.LocationId);

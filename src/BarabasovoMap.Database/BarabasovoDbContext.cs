@@ -25,11 +25,15 @@ namespace BarabasovoMap.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new LocationConfiguration());
             modelBuilder.ApplyConfiguration(new OwnerConfiguration());
+            modelBuilder.ApplyConfiguration(new PointCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new PointConfiguration());
+            modelBuilder.ApplyConfiguration(new PointServiceConfiguration());
             modelBuilder.ApplyConfiguration(new PropertyConfiguration());
             modelBuilder.ApplyConfiguration(new SellerConfiguration());
+            modelBuilder.ApplyConfiguration(new ServiceConfiguration());
         }
     }
 }

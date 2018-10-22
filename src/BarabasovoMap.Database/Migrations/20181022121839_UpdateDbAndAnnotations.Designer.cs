@@ -4,14 +4,16 @@ using BarabasovoMap.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BarabasovoMap.Database.Migrations
 {
     [DbContext(typeof(BarabasovoDbContext))]
-    partial class BarabasovoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181022121839_UpdateDbAndAnnotations")]
+    partial class UpdateDbAndAnnotations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
